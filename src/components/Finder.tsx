@@ -12,7 +12,7 @@ const defaultStyles: Record<string, CSSProperties> = {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        overflow: 'hidden',
+        overflow: 'hidden'
     },
     innerContainer: {
         width: '100%',
@@ -20,7 +20,7 @@ const defaultStyles: Record<string, CSSProperties> = {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        position: 'relative',
+        position: 'relative'
     },
     overlay: {
         position: 'absolute',
@@ -31,14 +31,14 @@ const defaultStyles: Record<string, CSSProperties> = {
         pointerEvents: 'none',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'center'
     },
     borderBox: {
         position: 'relative',
         width: '70%',
         aspectRatio: '1 / 1',
         border: '2px dashed rgba(239, 68, 68, 0.4)',
-        borderRadius: '0.5rem',
+        borderRadius: '0.5rem'
     },
     cornerTopLeft: {
         position: 'absolute',
@@ -49,7 +49,7 @@ const defaultStyles: Record<string, CSSProperties> = {
         left: 0,
         borderBottomColor: 'transparent',
         borderRightColor: 'transparent',
-        borderTopLeftRadius: '0.5rem',
+        borderTopLeftRadius: '0.5rem'
     },
     cornerTopRight: {
         position: 'absolute',
@@ -60,7 +60,7 @@ const defaultStyles: Record<string, CSSProperties> = {
         right: 0,
         borderBottomColor: 'transparent',
         borderLeftColor: 'transparent',
-        borderTopRightRadius: '0.5rem',
+        borderTopRightRadius: '0.5rem'
     },
     cornerBottomLeft: {
         position: 'absolute',
@@ -71,7 +71,7 @@ const defaultStyles: Record<string, CSSProperties> = {
         left: 0,
         borderTopColor: 'transparent',
         borderRightColor: 'transparent',
-        borderBottomLeftRadius: '0.5rem',
+        borderBottomLeftRadius: '0.5rem'
     },
     cornerBottomRight: {
         position: 'absolute',
@@ -82,8 +82,8 @@ const defaultStyles: Record<string, CSSProperties> = {
         right: 0,
         borderTopColor: 'transparent',
         borderLeftColor: 'transparent',
-        borderBottomRightRadius: '0.5rem',
-    },
+        borderBottomRightRadius: '0.5rem'
+    }
 };
 
 interface IFinderProps {
@@ -130,10 +130,10 @@ export default function Finder(props: IFinderProps) {
             <div style={defaultStyles.innerContainer}>
                 <div style={defaultStyles.overlay}>
                     <div style={{ ...defaultStyles.borderBox, ...styles?.borderBox }}>
-                        <div style={{ ...defaultStyles.cornerTopLeft, ...styles?.corners }}></div>
-                        <div style={{ ...defaultStyles.cornerTopRight, ...styles?.corners }}></div>
-                        <div style={{ ...defaultStyles.cornerBottomLeft, ...styles?.corners }}></div>
-                        <div style={{ ...defaultStyles.cornerBottomRight, ...styles?.corners }}></div>
+                        <div style={{ ...defaultStyles.cornerTopLeft, ...styles?.corners, ...styles?.cornerTopLeft }}></div>
+                        <div style={{ ...defaultStyles.cornerTopRight, ...styles?.corners, ...styles?.cornerTopRight }}></div>
+                        <div style={{ ...defaultStyles.cornerBottomLeft, ...styles?.corners, ...styles?.cornerBottomLeft }}></div>
+                        <div style={{ ...defaultStyles.cornerBottomRight, ...styles?.corners, ...styles?.cornerBottomRight }}></div>
                     </div>
                 </div>
                 {onOff && <OnOff scanning={scanning} startScanning={startScanning} stopScanning={stopScanning} style={styles?.onOff} />}
