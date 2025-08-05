@@ -1,6 +1,6 @@
 {
     "name": "@rishhh/react-qr-scanner",
-    "version": "2.3.3",
+    "version": "2.3.4",
     "description": "A library to scan QR codes in React.",
     "author": "Rishh",
     "license": "MIT",
