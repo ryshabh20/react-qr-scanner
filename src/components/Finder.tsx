@@ -126,9 +126,9 @@ export default function Finder(props: IFinderProps) {
     const { scanning, capabilities, onOff, torch, zoom, styles, startScanning, stopScanning } = props;
 
     return (
-        <div style={defaultStyles.fullContainer}>
-            <div style={defaultStyles.innerContainer}>
-                <div style={defaultStyles.overlay}>
+        <div style={{ ...defaultStyles.fullContainer, ...styles?.fullContainer }}>
+            <div style={{ ...defaultStyles.innerContainer, ...styles?.innerContainer }}>
+                <div style={{ ...defaultStyles.overlay, ...styles?.overlay }}>
                     <div style={{ ...defaultStyles.borderBox, ...styles?.borderBox }}>
                         <div style={{ ...defaultStyles.cornerTopLeft, ...styles?.corners, ...styles?.cornerTopLeft }}></div>
                         <div style={{ ...defaultStyles.cornerTopRight, ...styles?.corners, ...styles?.cornerTopRight }}></div>
